@@ -1,4 +1,4 @@
-# Install instructions
+# Instructions
 
 ### Steps to install
 * Run ```git clone https://github.com/jingr1986/Paranuara-Challenge.git```
