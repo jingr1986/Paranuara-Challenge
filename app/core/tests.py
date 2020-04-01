@@ -1,4 +1,4 @@
-import uuid
+import uuid, dateutil
 from decimal import Decimal
 
 from django.test import TestCase
@@ -111,6 +111,7 @@ def pre_load_people():
             "friends": "2,3,4,5",
             "greeting": "Hello, Carmella Lambert! You have 6 unread messages.",
         }
+    people1['registered'] = dateutil.parser.parse(people1['registered'])
     people1 = People.objects.create(**people1)
     people1.tags.add(Tag.objects.get(name='nostrud'))
     people1.tags.add(Tag.objects.get(name='nostrud'))
@@ -139,6 +140,7 @@ def pre_load_people():
             "greeting": "Hello, Decker Mckenzie! You have 2 unread messages.",
             "friends": "3,4,5"
           }
+    people2['registered'] = dateutil.parser.parse(people2['registered'])
     people2 = People.objects.create(**people2)
     people2.tags.add(Tag.objects.get(name='commodo'))
     people2.favourite_foods.add(Food.objects.get(name='beetroot'))
@@ -165,6 +167,8 @@ def pre_load_people():
         "greeting": "Hello, Bonnie Bass! You have 10 unread messages.",
         "friends": "4"
     }
+
+    people3['registered'] = dateutil.parser.parse(people3['registered'])
     people3 = People.objects.create(**people3)
     people3.tags.add(Tag.objects.get(name='commodo'))
     people3.favourite_foods.add(Food.objects.get(name='beetroot'))
@@ -190,6 +194,7 @@ def pre_load_people():
             "greeting": "Hello, Rosemary Hayes! You have 1 unread messages.",
             "friends": '1,5'
     }
+    people4['registered'] = dateutil.parser.parse(people4['registered'])
     people4 = People.objects.create(**people4)
     people4.tags.add(Tag.objects.get(name='commodo'))
     people4.favourite_foods.add(Food.objects.get(name='beetroot'))
@@ -213,6 +218,8 @@ def pre_load_people():
             "registered": "2017-03-19T03:28:28 -11:00",
             "greeting": "Hello, Mindy Beasley! You have 8 unread messages."
     }
+
+    people5['registered'] = dateutil.parser.parse(people5['registered'])
     people5 = People.objects.create(**people5)
     people5.tags.add(Tag.objects.get(name='commodo'))
     people5.favourite_foods.add(Food.objects.get(name='banana'))
@@ -237,6 +244,8 @@ def pre_load_people():
             "registered": "2016-12-31T12:45:45 -11:00",
             "greeting": "Hello, Grace Kelly! You have 4 unread messages.",
         }
+
+    people6['registered'] = dateutil.parser.parse(people6['registered'])
     people6 = People.objects.create(**people6)
     people6.tags.add(Tag.objects.get(name='commodo'))
     people6.favourite_foods.add(Food.objects.get(name='beetroot'))

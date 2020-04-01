@@ -2,6 +2,7 @@
 
 ### Steps to install
 * Run ```git clone https://github.com/jingr1986/Paranuara-Challenge.git```
+* Run ```cd Paranuara-Challenge```
 * Run ```source setup.sh```
 * Run ```python manage.py makemigrations```
 * Run ```python manage.py migrate```
