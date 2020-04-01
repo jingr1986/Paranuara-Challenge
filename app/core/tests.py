@@ -1,4 +1,4 @@
-import uuid, dateutil
+import uuid, dateutil.parser
 from decimal import Decimal
 
 from django.test import TestCase
